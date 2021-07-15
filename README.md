@@ -2,7 +2,7 @@
 
 ### <a href="http://laravel-e-commerce-example.herokuapp.com" target="_blank">Live site</a>
 
-## Laravel e-commerce example application
+## E-commerce example application with Laravel and Livewire
 
 ### Run this project
 
