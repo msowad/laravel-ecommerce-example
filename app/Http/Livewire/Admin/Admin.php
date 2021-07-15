@@ -34,13 +34,13 @@ class Admin extends Component
         if (can('view dashboard')) {
             $y     = date('Y');
             $m     = date('m');
-            $days  = cal_days_in_month(0, $m, $y);
+            $days  = $this->daysInMonth($m, $y);
             $end   = $y . '-' . $m . '-' . $days . ' 23:59:59';
             $start = $y . '-' . $m . '-1 00:00:00';
             if ($m < 12) {
                 for ($j = $m + 1, $k = 1; $j <= 12; $j++, $k++) {
                     $pre_y                     = $y - 1;
-                    $days                      = cal_days_in_month(0, $j, $pre_y);
+                    $days                      = $this->daysInMonth($j, $pre_y);
                     $end                       = $pre_y . '-' . $j . '-' . $days . ' 23:59:59';
                     $start                     = $pre_y . '-' . $j . '-1 00:00:00';
                     $total_e                   = $this->sellSnglMonTotal($start, $end);
@@ -61,7 +61,7 @@ class Admin extends Component
             }
 
             for ($i = 1, $k = $k; $i <= $m; $i++, $k++) {
-                $days                      = cal_days_in_month(0, $i, $y);
+                $days                      = $this->daysInMonth($i, $y);
                 $end                       = $y . '-' . $i . '-' . $days . ' 23:59:59';
                 $start                     = $y . '-' . $i . '-1 00:00:00';
                 $total_e                   = $this->sellSnglMonTotal($start, $end);
@@ -100,6 +100,11 @@ class Admin extends Component
             $this->totalUser = User::where('email_verified_at', '!=', null)->count();
             $this->item      = Product::count();
         }
+    }
+
+    private function daysInMonth($month, $year)
+    {
+        return $month == 2 ? ($year % 4 ? 28 : ($year % 100 ? 29 : ($year % 400 ? 28 : 29))) : (($month - 1) % 7 % 2 ? 30 : 31);
     }
 
     public function sellSnglMonTotal($start, $end)
