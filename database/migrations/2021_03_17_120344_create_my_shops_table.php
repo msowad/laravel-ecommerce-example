@@ -23,7 +23,7 @@ class CreateMyShopsTable extends Migration
             $table->string('mail2')->nullable();
             $table->text('address')->default('Address of our shop');
             $table->text('map')->default('map url');
-            $table->string('timezone')->nullable();
+            $table->string('timezone')->default('UTC');
             $table->string('youtube')->nullable();
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
