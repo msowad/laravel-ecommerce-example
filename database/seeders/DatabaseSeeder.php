@@ -3,16 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\AboutsUs;
-use App\Models\Brand;
-use App\Models\Category;
-use App\Models\Color;
-use App\Models\Coupon;
 use App\Models\MyShop;
-use App\Models\Product;
-use App\Models\ProductDetail;
-use App\Models\Size;
-use App\Models\Slider;
-use App\Models\Tax;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
@@ -180,54 +171,54 @@ class DatabaseSeeder extends Seeder
 
         User::first()->syncPermissions($allPermissions);
 
-        Size::create(['size' => 'xs']);
-        Size::create(['size' => 'sm']);
-        Size::create(['size' => 'md']);
-        Size::create(['size' => 'lg']);
-        Size::create(['size' => 'xl']);
+        // Size::create(['size' => 'xs']);
+        // Size::create(['size' => 'sm']);
+        // Size::create(['size' => 'md']);
+        // Size::create(['size' => 'lg']);
+        // Size::create(['size' => 'xl']);
 
-        Coupon::create(['title' => 'First Shop', 'code' => 'first123', 'value' => 100, 'cart_min_value' => 300, 'type' => 'F', 'expired_on' => now()->addYears(5)]);
+        // Coupon::create(['title' => 'First Shop', 'code' => 'first123', 'value' => 100, 'cart_min_value' => 300, 'type' => 'F', 'expired_on' => now()->addYears(5)]);
 
-        Category::create(['name' => 'Computer', 'slug' => 'computer', 'in_home_page' => '1']);
-        Brand::create(['name' => 'Computer', 'slug' => 'computer', 'in_home_page' => '1']);
+        // Category::create(['name' => 'Computer', 'slug' => 'computer', 'in_home_page' => '1']);
+        // Brand::create(['name' => 'Computer', 'slug' => 'computer', 'in_home_page' => '1']);
 
-        Color::create(['value' => '#d4cece']);
-        Color::create(['value' => '#f76262']);
-        Color::create(['value' => '#6b6b6b']);
-        Color::create(['value' => '#78b6f5']);
+        // Color::create(['value' => '#d4cece']);
+        // Color::create(['value' => '#f76262']);
+        // Color::create(['value' => '#6b6b6b']);
+        // Color::create(['value' => '#78b6f5']);
 
-        Tax::create(['value' => 10, 'description' => '10% tax']);
+        // Tax::create(['value' => 10, 'description' => '10% tax']);
 
-        Slider::create(['sub_heading' => 'Shop from here', 'heading' => 'Shop', 'link' => url('shop'), 'link_text' => 'Shop Now', 'order_id' => 1]);
-        Slider::create(['sub_heading' => 'This is our shop', 'heading' => 'Our Shop', 'link' => url('shop'), 'link_text' => 'Shop Now', 'order_id' => 2]);
+        // Slider::create(['sub_heading' => 'Shop from here', 'heading' => 'Shop', 'link' => url('shop'), 'link_text' => 'Shop Now', 'order_id' => 1]);
+        // Slider::create(['sub_heading' => 'This is our shop', 'heading' => 'Our Shop', 'link' => url('shop'), 'link_text' => 'Shop Now', 'order_id' => 2]);
 
-        Product::create([
-            'name'              => 'Desktop Computer',
-            'slug'              => 'desktop-computer',
-            'category_id'       => 1,
-            'brand_id'          => 1,
-            'short_description' => '<h1></h1><p>Short Description</p>',
-            'description'       => '<h1></h1><p>Description</p>',
-            'keywords'          => 'desktop, computer',
-            'lead_time'         => 10,
-            'tax_id'            => 1,
-            'promo'             => 0,
-            'featured'          => 1,
-            'discounted'        => 0,
-            'trending'          => 0,
-            'best_seller'       => 0,
-        ]);
+        // Product::create([
+        //     'name'              => 'Desktop Computer',
+        //     'slug'              => 'desktop-computer',
+        //     'category_id'       => 1,
+        //     'brand_id'          => 1,
+        //     'short_description' => '<h1></h1><p>Short Description</p>',
+        //     'description'       => '<h1></h1><p>Description</p>',
+        //     'keywords'          => 'desktop, computer',
+        //     'lead_time'         => 10,
+        //     'tax_id'            => 1,
+        //     'promo'             => 0,
+        //     'featured'          => 1,
+        //     'discounted'        => 0,
+        //     'trending'          => 0,
+        //     'best_seller'       => 0,
+        // ]);
 
-        ProductDetail::create([
-            'sku'        => 'sku',
-            'mrp'        => 3567,
-            'price'      => 3450,
-            'qty'        => 100,
-            'size_id'    => 1,
-            'color_id'   => 1,
-            'product_id' => 1,
-            'order_id'   => 1,
-            'status'     => 1,
-        ]);
+        // ProductDetail::create([
+        //     'sku'        => 'sku',
+        //     'mrp'        => 3567,
+        //     'price'      => 3450,
+        //     'qty'        => 100,
+        //     'size_id'    => 1,
+        //     'color_id'   => 1,
+        //     'product_id' => 1,
+        //     'order_id'   => 1,
+        //     'status'     => 1,
+        // ]);
     }
 }
