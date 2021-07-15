@@ -68,7 +68,7 @@ class MyShop extends Component
             'google_plus'       => 'nullable|url',
             'logo_primary'      => 'nullable|image|mimes:jpeg,png,jpg,svg',
             'logo_secondary'    => 'nullable|image|mimes:jpeg,png,jpg,svg',
-            'favicon'           => 'nullable|image|mimes:jpeg,png,jpg,svg,ico',
+            'favicon'           => 'nullable|mimes:jpeg,png,jpg,svg,ico',
         ]);
 
         $media = MediaController::set('logo_primary', $validatedData['logo_primary'], 'My Shop', 'logo_primary');
