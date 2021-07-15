@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Models\MyShop;
+use Exception;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
@@ -30,9 +32,14 @@ class ConfigServiceProvider extends ServiceProvider
         if (cache()->has('app.info')) {
             $shop = cache("app.info");
         } else {
-            if (Schema::hasTable(MyShop::getTableName())) {
-                $shop = MyShop::with(['logoPrimary', 'logoSecondary', 'favicon'])->first();
-                cache()->put("app.info", $shop, now()->addHours(72));
+            try {
+                DB::connection()->getPdo();
+                if (Schema::hasTable(MyShop::getTableName())) {
+                    $shop = MyShop::with(['logoPrimary', 'logoSecondary', 'favicon'])->first();
+                    cache()->put("app.info", $shop, now()->addHours(72));
+                }
+            } catch (Exception $e) {
+                info($e);
             }
         }
 
