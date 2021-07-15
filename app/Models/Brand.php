@@ -23,7 +23,7 @@ class Brand extends Model
     public function photo()
     {
         return $this->hasOne(Media::class, 'model_id')
-            ->where('model_type', Category::class)
+            ->where('model_type', Brand::class)
             ->withDefault(['url' => null]);
     }
 }
