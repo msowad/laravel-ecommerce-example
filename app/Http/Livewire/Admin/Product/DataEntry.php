@@ -383,8 +383,6 @@ class DataEntry extends Component
         $this->sizesDt  = $this->hasAttr ? Size::where('status', 1)->get()->toArray() : [];
         $this->colorsDt = $this->hasAttr ? Color::where('status', 1)->get()->toArray() : [];
 
-        dd($this->product->productDetails);
-
         return view('livewire.admin.product.data-entry')
             ->layout('layouts.admin');
     }
