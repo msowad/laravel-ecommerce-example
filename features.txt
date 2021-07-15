@@ -1,0 +1,8 @@
+Admin Data Table :
+    1. Table
+    2. Move to trash
+    3. Restore
+    4. Permanent delete
+    5. Directly permanent delete
+    6. Checkbox operation
+    7. Whole table select

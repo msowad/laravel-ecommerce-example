@@ -1,0 +1,78 @@
+:root {
+    --mdc-theme-primary: #f70c9dff;
+    --mdc-theme-sidebar-top: #ca057e;
+    --mdc-theme-sidebar-bottom: #840653;
+    --mdc-theme-secondary: #0f1a20ff;
+    /* --mdc-theme-primary: #7a00ff;
+    --mdc-theme-secondary: #ff420f; */
+    --mdc-theme-background: #fff;
+    --mdc-theme-surface: #fff;
+    --mdc-theme-error: #b00020;
+    --mdc-theme-on-primary: #fff;
+    --mdc-theme-on-secondary: #fff;
+    --mdc-theme-on-surface: #000;
+    --mdc-theme-on-error: #fff;
+    --mdc-theme-text-primary-on-background: rgba(0, 0, 0, 0.87);
+    --mdc-theme-text-secondary-on-background: rgba(0, 0, 0, 0.54);
+    --mdc-theme-text-hint-on-background: rgba(0, 0, 0, 0.38);
+    --mdc-theme-text-disabled-on-background: rgba(0, 0, 0, 0.38);
+    --mdc-theme-text-icon-on-background: rgba(0, 0, 0, 0.38);
+    --mdc-theme-text-primary-on-light: rgba(0, 0, 0, 0.87);
+    --mdc-theme-text-secondary-on-light: rgba(0, 0, 0, 0.54);
+    --mdc-theme-text-hint-on-light: rgba(0, 0, 0, 0.38);
+    --mdc-theme-text-disabled-on-light: rgba(0, 0, 0, 0.38);
+    --mdc-theme-text-icon-on-light: rgba(0, 0, 0, 0.38);
+    --mdc-theme-text-primary-on-dark: white;
+    --mdc-theme-text-secondary-on-dark: rgba(255, 255, 255, 0.7);
+    --mdc-theme-text-hint-on-dark: rgba(255, 255, 255, 0.5);
+    --mdc-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.5);
+    --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5);
+
+    /* ========= Font Size */
+    --biggest-font-size: 2.5rem;
+    --bigger-font-size: 1.8rem;
+    --big-font-size: 1.5rem;
+    --small-font-size: 1rem;
+    --smaller-font-size: 0.8rem;
+
+    /*========== Colors ==========*/
+    --first-color: #f70c9dff;
+    --first-color-shadow: #f188c8;
+    --first-color-alt: #de0b8d;
+    --first-color-opposite: #ffff;
+
+    --second-color: #0f1a20ff;
+    --second-color-alt: #182a33;
+    --second-color-opposite: #ffff;
+
+    --title-color: #0f1a20ff;
+    --text-color: #182a33;
+    --body-color: #fbfefd;
+    --container-color: #f7f6f6;
+
+    --transition: all 0.3s ease-in-out;
+}
+
+::selection {
+    background: var(--first-color);
+    color: var(--first-color-opposite);
+}
+
+@media screen and (max-width: 425px) {
+    :root {
+        --biggest-font-size: 1.7rem;
+        --bigger-font-size: 1.2rem;
+        --big-font-size: 1rem;
+        --small-font-size: 0.8rem;
+        --smaller-font-size: 0.6rem;
+    }
+}
+@media (max-width: 768px) and (min-width: 425px) {
+    :root {
+        --biggest-font-size: 2rem;
+        --bigger-font-size: 1.5rem;
+        --big-font-size: 1.2rem;
+        --small-font-size: 0.9rem;
+        --smaller-font-size: 0.7rem;
+    }
+}
