@@ -12,7 +12,7 @@ class ShopMenu extends Component
         $categories = Category::with('subCategories')
             ->withCount('subCategories')
             ->has('products')
-            ->where('parent_category', '===', null)
+            ->where('parent_category', '=', null)
             ->orderBy('sub_categories_count', 'desc')
             ->where('status', 1)->get();
 
