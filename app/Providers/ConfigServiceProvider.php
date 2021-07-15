@@ -47,7 +47,9 @@ class ConfigServiceProvider extends ServiceProvider
             $this->setConfig($shop);
 
             if (date_default_timezone_get() != $shop->timezone) {
-                $shop->timezone && date_default_timezone_set($shop->timezone);
+                if ($shop->timezone != '') {
+                    date_default_timezone_set($shop->timezone);
+                }
             }
         }
     }
