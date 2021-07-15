@@ -22,7 +22,7 @@ class DataEntry extends Component
     public $editId = '';
     public $category;
     public $in_home_page;
-    public $parent_category = 0;
+    public $parent_category = null;
     public $parent_category_arr;
     public $photo;
 

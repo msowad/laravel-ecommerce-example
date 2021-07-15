@@ -76,7 +76,7 @@
                         <li><a class="btn btn-white my-md-2 shadow-0 mx-lg-1 @yield('home')" href="{{ route('home') }}">Home</a>
                         </li>
 
-                        {{-- @livewire('child.shop-menu') --}}
+                        @livewire('child.shop-menu')
 
                         <li><a class="btn btn-white my-md-2 shadow-0 mx-lg-1 @yield('about-us')" href="{{ route('aboutUs') }}">About
                                 Us</a></li>
